@@ -1,0 +1,54 @@
+:root {
+  --primary-color: #fff;
+  --warm-grey: #808080;
+  --black: #000;
+}
+
+.center {
+  width: 990px;
+  margin: 0 auto;
+}
+
+.box_section {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.box_row {
+  width: 227px;
+}
+
+.audio::before {
+  content: "";
+  background: url("https://indianexpress.com/wp-content/themes/indianexpress/images/audio.png");
+  background-color: var(--black);
+}
+
+.box {
+    position: relative;
+}
+
+.story {
+  padding: 10px;
+  background-color: var(--primary-color);
+  position: absolute;
+  bottom: -11px;
+  left: 5px;
+  right: 5px;
+}
+
+.text-1 {
+    color: var(--warm-grey);
+    font-size: 12px;
+    display: block;
+}
+
+.text-2 {
+    font-size: 14px;
+    display: block;
+}
+
+.audio {
+    font-size: 12px;
+}
