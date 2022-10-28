@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alignment</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Ubuntu", sans-serif;
+      }
+
+      .container {
+        width: 900px;
+        border: 3px solid purple;
+        margin: 33px auto;
+        background-color: rgb(250, 226, 205);
+      }
+
+      .items {
+        border: 3px solid grey;
+        margin: 12px 3px;
+        padding: 12px 3px;
+        background: rgb(248, 238, 238);
+      }
+
+      #fruits {
+        float: left;
+        width: 48%;
+      }
+
+      #computer {
+        float: right;
+        width: 48%;
+      }
+
+      #stationary {
+        /* float: left; */
+        width: 100%;
+        /* clear: left; */
+        /* clear: right; */
+        clear: both;
+      }
+
+      p, h3 {
+        text-align: justify;
+      }
+
+      h1 {
+        margin: 23px auto;
+        width: 400px;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>
+        Welcome to my store
+      </h1>
+      <div id="fruits" class="items">
+        <h3>Fruits</h3>
+        <p id="fruitsPara" class="para">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque
+          saepe, consequuntur fugit eius, dolor recusandae distinctio
+          consectetur optio ipsa voluptatem, exercitationem quaerat facilis
+          voluptatum tempora? Mollitia nemo dolore nobis ipsum. Lorem ipsum
+          dolor sit amet consectetur adipisicing elit. Odio nesciunt, suscipit
+          quidem harum quis labore modi possimus. Non temporibus sed fugit fuga.
+          Esse, minus aut. Quibusdam labore est perspiciatis rerum sed ex!i
+        </p>
+      </div>
+
+      <div id="computer" class="items">
+        <h3>Computer</h3>
+        <p id="computerPara" class="para">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque
+          saepe, consequuntur fugit eius, dolor recusandae distinctio
+          consectetur optio ipsa voluptatem, exercitationem quaerat facilis
+          voluptatum tempora? Mollitia nemo dolore nobis ipsum. Lorem ipsum
+          dolor sit amet consectetur adipisicing elit. Animi repellendus harum
+          eligendi beatae suscipit. Cupiditate vel, quis dolores quae
+          necessitatibus aperiam pariatur aspernatur assumenda voluptate,
+          officia minima eveniet accusantium voluptatum nemo consectetur?
+        </p>
+      </div>
+
+      <div id="stationary" class="items">
+        <h3>stationary</h3>
+        <p id="stationaryPara" class="para">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque
+          saepe, consequuntur fugit eius, dolor recusandae distinctio
+          consectetur optio ipsa voluptatem, exercitationem quaerat facilis
+          voluptatum Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Sequi corrupti temporibus voluptatum in, ex hic repellat at iure rerum
+          exercitationem fugit qui deserunt cupiditate voluptates amet eveniet,
+          magni eligendi natus ab earum. tempora? Mollitia nemo dolore nobis
+          ipsum.
+        </p>
+      </div>
+
+      <div id="glasses" class="items">
+        <h3>glasses</h3>
+        <p id="glassesPara" class="para">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque
+          saepe, consequuntur fugit eius, dolor recusandae distinctio
+          consectetur optio ipsa voluptatem, exercitationem quaerat facilis
+          voluptatum Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Sequi corrupti temporibus voluptatum in, ex hic repellat at iure rerum
+          exercitationem fugit qui deserunt cupiditate voluptates amet eveniet,
+          magni eligendi natus ab earum. tempora? Mollitia nemo dolore nobis
+          ipsum.
+        </p>
+      </div>
+    </div>
+
+  </body>
+</html>

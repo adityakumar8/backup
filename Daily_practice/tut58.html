@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>setTimeOut</title>
+    <style>
+        #time {
+            font-weight: bolder;
+            color:darkcyan;
+        }
+        .container {
+            background-color: rgb(147, 174, 224);
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 50px;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+
+        <span id="time"></span>
+    </div>
+
+    <script>
+      console.log("lecture 58");
+
+      // setTimeOut -- Allows us to run the function once after the inteval of time.
+      // clearInterval -- Allows us to run the function repedately after the interval of time.
+
+      function greet(name, ask) {
+        console.log("Hii" + name + ask);
+      }
+      intervalId = setTimeout(greet, 5000, "Aditya", "How are you");
+
+    //   clearInterval(intervalId);
+
+      // setTimeout(greet(), 2000); --> wrong because it is calling the function inside the setTimeout.
+
+      function displayTime() {
+        time = new Date();
+        console.log(time);
+        document.getElementById("time").innerHTML = time;
+      }
+      setInterval(displayTime, 1000);
+    </script>
+  </body>
+</html>

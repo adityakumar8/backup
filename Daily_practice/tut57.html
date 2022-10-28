@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eventslistener</title>
+  </head>
+  <style>
+
+    h1 {
+        color: cornflowerblue;
+    }
+
+    #btn {
+        padding: 10px;
+        background-color: blueviolet;
+        border: 2px solid white;
+        color: white;
+        border-radius: 5px;
+        font-family: sans-serif;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    #btn:hover {
+        color: aqua;
+    }
+    
+    p {
+        color: cadetblue;
+    }
+  </style>
+  <body>
+    <!-- Browser events:
+    click
+    contextmenu
+    mouseover/mouseout
+    mousedown/mouseup
+    mousemove
+
+    submit
+    focus
+
+    DOMContentLoaded
+
+    transitioned -->
+
+    <div class="container">
+      <h1>This is heading</h1>
+      <p id="para">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus ab
+        similique nulla molestiae quod, minima odit, recusandae esse, nesciunt
+        laborum quasi nemo temporibus at consequuntur reiciendis. Laudantium
+        perferendis sit et excepturi voluptas. Repudiandae obcaecati, eligendi
+        deleniti repellat, praesentium commodi dolor consequuntur eum quae ab
+        enim non, numquam similique voluptatibus dignissimos neque possimus
+        libero corrupti perferendis error laboriosam! Nam sit necessitatibus
+        quaerat delectus quod ipsam nulla amet facere, doloremque praesentium
+        sapiente quia non, facilis, voluptate eum optio ex provident sunt! Error
+        aliquam repudiandae provident nisi dicta dolore deleniti, iusto
+        recusandae assumenda? Doloremque quam qui vel in hic consectetur, veniam
+        ullam dolor?/p>
+      </p>
+    </div>
+    <button id="btn" onclick="toggleHide()">show/hide</button>
+
+    <script>
+
+        // let para = document.getElementById('para');
+        // para.addEventListener('mouseover', function run() {
+        //     console.log('Mouse inside');
+        // });
+
+        // para.addEventListener('mouseout', function out(){
+        //     console.log('mouse out');
+        // });
+
+        // para.addEventListener('mousedown', function down(){
+        //     console.log('mouse down');
+        // });
+
+        function toggleHide(){
+            let btn = document.getElementById('btn');
+            let para = document.getElementById('para');
+
+            if(para.style.display != 'none') {
+                para.style.display = 'none';
+            }
+            else {
+                para.style.display = 'block';
+            }
+        }
+    </script>
+  </body>
+</html>
