@@ -1,0 +1,524 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&family=PT+Serif+Caption:ital@0;1&family=PT+Serif:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.iea-wrapper {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.adda-logo img {
+  max-width: 240px;
+}
+
+.follow-txt {
+  font-size: 13px;
+  font-weight: 600;
+  color: #000;
+  font-family: "Montserrat", sans-serif;
+  margin-top: 5px;
+}
+
+.icon-container-iea {
+  display: flex;
+  justify-content: end;
+  max-width: 100%;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.icon-container-iea a {
+  margin-left: 15px;
+}
+
+.header-iea {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding-bottom: 12px;
+}
+
+.navigation-iea ul {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.navigation-iea li a {
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navigation-iea li a:hover {
+  color: #ff0000;
+  cursor: pointer;
+}
+
+.hero-bg {
+  background-image: url("./images/hero-bg.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 1);
+  padding-bottom: 35px;
+}
+
+.hero-banner {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.hero-banner h3 {
+  font-size: 21px;
+  font-weight: 600;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 13px;
+  padding-top: 75px;
+}
+
+.text-s {
+  font-size: 15px;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+  font-style: italic;
+  color: #fff;
+  margin-left: 2px;
+}
+
+.hero-banner h1 {
+  max-width: 615px;
+  font-size: 65px;
+  font-weight: bold;
+  color: #fff;
+  font-family: "PT Serif", serif;
+  margin: 14px 0 21px 0;
+  border-top: 4px solid #e2000f;
+}
+
+.hero-banner h2 {
+  font-size: 33px;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.33;
+  color: #fff;
+  margin-bottom: 23px;
+  max-width: 418px;
+}
+
+.iea-date-place {
+  display: flex;
+  justify-content: space-between;
+}
+
+.event-d {
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  display: block;
+  margin-bottom: 7px;
+}
+.event-p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.iea-register-btn {
+  color: #ffffff;
+  background-color: #ff0000;
+  padding: 15px 30px;
+  align-self: center;
+  border-radius: 35px;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+}
+
+.guest-image {
+  margin-top: 13px;
+}
+
+.guest-image img {
+  max-width: 330px;
+}
+
+.partners-logo {
+  max-width: 915px;
+  margin: auto;
+  padding: 15px 30px;
+  background-color: #fff;
+  margin-top: -40px;
+  margin-bottom: 110px;
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+}
+
+.sponsers-domain {
+  display: block;
+  font-size: 12px;
+  font-family: Gulliver-Regular;
+  margin-bottom: 15px;
+  color: #000;
+}
+
+.partners-logo ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.partners-logo ul li {
+  text-align: center;
+  list-style: none;
+  position: relative;
+}
+
+.sponser-logo-conatiner {
+  display: flex;
+  gap: 15px;
+}
+
+.sponser-logo-conatiner img {
+  max-width: 113px;
+  height: 38px;
+}
+
+.brands-logo::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  background: #707070;
+  right: -32px;
+  top: 10px;
+  bottom: 0;
+}
+
+.n-article {
+  max-width: 1000px;
+  margin: auto;
+  border: 10px solid #d8d8d8;
+  text-align: center;
+  border-radius: 13px;
+  margin-bottom: 90px;
+}
+
+.n-article p {
+  max-width: 950px;
+  padding: 40px 25px 20px 25px;
+  text-align: center;
+  font-size: 35px;
+  font-style: italic;
+  font-family: "PT Serif Caption", serif;
+  color: #000;
+  line-height: 1.3;
+}
+
+.celebrity-name {
+  margin-bottom: 40px;
+  display: block;
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  color: #000;
+}
+
+.page-info-container {
+  background-color: #000;
+  text-align: center;
+}
+
+.page-info {
+  max-width: 1170px;
+  margin: auto;
+  padding-top: 40px;
+}
+
+.info-heading {
+  color: #fff;
+  font-size: 58px;
+  font-family: "PT Serif", serif;
+  display: block;
+  margin-bottom: 17px;
+}
+
+.page-info p {
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.more-info {
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  display: block;
+  padding-bottom: 32px;
+}
+
+.page-stats {
+  display: flex;
+  margin: auto;
+  justify-content: space-between;
+  padding-top: 32px;
+  padding-bottom: 40px;
+}
+.stats-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.stats-num {
+  font-size: 58px;
+  margin-right: 5px;
+  font-weight: bold;
+  color: #dc0505;
+  font-family: "Montserrat", sans-serif;
+}
+
+.guest-more-info {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+  margin-top: 80px;
+}
+
+.info-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 32px;
+  font-weight: bold;
+  color: #000;
+}
+
+.guest-list {
+  margin-top: 65px;
+  margin-bottom: 30px;
+}
+
+.guest-list ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.guest-list li {
+  flex-grow: 1;
+}
+
+.view-all-btn {
+  padding: 10px 45px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+}
+
+.view-all-btn a {
+  color: #e1000f;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.guest-more-info-s {
+  text-align: center;
+  background-color: #000;
+  margin-top: 80px;
+  padding: 50px 0;
+}
+
+.info-title-s {
+  font-family: "Montserrat", sans-serif;
+  font-size: 32px;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 50px;
+}
+
+.celeb-friend {
+  display: flex;
+  justify-content: center;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.celeb-friend ul {
+  display: flex;
+  gap: 58px;
+  list-style: none;
+  margin-bottom: 100px;
+  margin-top: 50px;
+}
+
+.celeb-friend-l li img {
+  display: block;
+}
+
+.brands-adda {
+  text-align: center;
+  margin-bottom: 120px;
+}
+
+.brands-adda .info-title {
+  margin-top: 80px;
+}
+
+.adda-sponser {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.adda-sponser ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  margin-bottom: 45px;
+}
+
+.adda-sponser ul li {
+  padding: 25px;
+  border: 1px solid #979797;
+}
+
+.brands-adda .info-title {
+  margin-top: 80px;
+  display: block;
+  margin-bottom: 33px;
+}
+
+@media only screen and (min-width: 768px) {
+  .page-stats {
+    border-top: 1px solid #5a5a5a;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .info-title {
+    font-size: 16px;
+  }
+  .hero-banner h3 {
+    font-size: 14px;
+  }
+  .hero-banner h1 {
+    font-size: 26px;
+  }
+  .hero-banner h2 {
+    font-size: 14px;
+  }
+  .text-s {
+    font-size: 12px;
+  }
+  .event-d {
+    font-size: 14px;
+  }
+  .event-p {
+    font-size: 14px;
+  }
+  .guest-image img {
+    max-width: 100px;
+  }
+
+  .info-title {
+    font-size: 16px;
+  }
+
+  .info-heading {
+    font-size: 25px;
+  }
+
+  .page-info-container {
+    padding: 0 15px 0 15px;
+  }
+
+  .page-info p {
+    font-size: 12px;
+    line-height: 1.7;
+  }
+  .more-info {
+    font-size: 12px;
+    line-height: 1.7;
+  }
+
+  .page-stats {
+    flex-wrap: wrap;
+  }
+
+  .stats-title {
+    width: 50%;
+    display: block;
+    border-right: 1px solid #707070;
+    padding: 20px;
+  }
+
+  .yrs {
+    border-bottom: 1px solid #707070;
+    border-left: 1px solid #707070;
+    border-top: 1px solid #707070;
+  }
+  .Episode {
+    border-bottom: 1px solid #707070;
+    border-top: 1px solid #707070;
+  }
+  .reach {
+    border-bottom: 1px solid #707070;
+    border-left: 1px solid #707070;
+  }
+  .association {
+    border-bottom: 1px solid #707070;
+  }
+  .stats-num {
+    display: block;
+  }
+  .partners-logo ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .partners-logo ul li {
+    width: 50%;
+  }
+  .n-article {
+    border: 2px solid #d8d8d8;
+    border-radius: 8px;
+    width: 300px;
+  }
+  .n-article p {
+    font-size: 16px;
+    line-height: 1.75;
+    padding: 25px 12px 15px 12px;
+  }
+  .celebrity-name {
+    margin-bottom: 25px;
+  }
+  .guest-list {
+    width: 100%;
+  }
+  .guest-list ul {
+    flex-wrap: wrap;
+  }
+
+  .adda-sponser {
+    padding: 20px;
+  }
+  .adda-sponser ul {
+    flex-wrap: wrap;
+  }
+  .adda-sponser ul li {
+    width: 48%;
+    margin-bottom: 20px;
+  }
+  .adda-sponser ul li img {
+    width: 100%;
+  }
+}
