@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<style>
+  div {
+    border: 1px solid black;
+    padding: 16px;
+  }
+
+  /* body {
+    height: 500vh;
+  } */
+</style>
+
+<body onscroll="myFunction()">
+  <h1>The Element Object</h1>
+  <h2>The getElementsByTagName() Method</h2>
+
+  <div id="myDIV">
+    <div>
+      <!-- id="myDIV2" -->
+      <p>I am a paragraph.</p>
+      <p>I am a paragraph.</p>
+      <p>I am a paragraph.</p>
+    </div>
+    <div>
+      <p>I am a paragraph.</p>
+      <p>I am a paragraph.</p>
+      <p>I am a paragraph.</p>
+      <div>
+        <p>I am a paragraph.</p>
+        <p>I am a paragraph.</p>
+        <p>I am a paragraph.</p>
+      </div>
+    </div>
+    <p>I am a paragraph.</p>
+    <p>I am a paragraph.</p>
+    <p>I am a paragraph.</p>
+  </div>
+
+  <p>The number of p elements in "myDIV" is:</p>
+  <p id="demo"></p>
+
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+
+  <script>
+
+    let pval = jQuery('#myDIV p');
+
+    jQuery(window).on('scroll', function () {
+      let dd = pval.eq(2).offset().top;
+      if (jQuery('.demooo').length < 1) {
+        pval.eq(2).append('<div style="background-color:#7bdcb5" class="demooo">Appended div</div>');
+      }
+    });
+
+    // let pval = jQuery('#myDIV p');
+    // let dd = pval.offset().top;
+    // jQuery(window).on('scroll', function () {
+    //   if (jQuery('.demooo').length < 1) {
+    //     pval.eq(2).append('<div class="demooo">Appended text</div>');
+    //     // jQuery(window).scrollTop(dd);
+    //   }
+    // });
+
+
+    // let numb = document.getElementById("myDiv").childElementCount;
+    // document.getElementById("demo").innerHTML = numb;
+
+      // const element = document.getElementById("myDIV");
+      // const nodes = element.getElementsByTagName("p");
+      // document.getElementById("demo").innerHTML = nodes.length;
+
+      // for (let i = 0; i < nodes.length; i++) {
+      //   if (i === 2) {
+      //     function createChildDiv(name, numberp) {
+      //       let ps = document.createElement('div');
+      //       ps.textContent = name;
+      //       return ps;
+      //     }
+      //     const addDiv = document.getElementById("myDIV");
+      //     addDiv.appendChild(createChildDiv('Div injcted'));
+      //   }
+      // }
+
+  </script>
+
+</body>
+
+</html>
+
+
+<script>
+
+      // let ps = document.createElement('div');
+      // ps.textContent = name;
+      // var abc = document.querySelector("#myDIV2");
+      // abc.getElementsByTagName("p")[2].append(ps);
+
+  		// jQuery(document).scroll(function () {
+		// 	let pval = $('#pcl-full-content p')
+		// 	let value = $('#pcl-full-content p').length;
+		// 	if (value > 2) {
+		// 		pval.eq(2).append("<div>Appended text</div>");
+		// 	}
+		// });
+
+// function createChildDiv(name,numberp) {children.length
+//   	let ps = document.createElement('div');
+//   	ps.textContent = name;
+//   	return ps;
+//   }
+//   const addDiv = document.querySelector('#pcl-full-content');
+//   addDiv.appendChild(createChildDiv('Div injcted'));
+
+  // function myFunction() {
+  // 	const node = document.createElement("div");
+  // 	const textnode = document.createTextNode("appended");
+  // 	node.appendChild(textnode);
+  // 	document.getElementById("pcl-full-content").appendChild(node);
+  // }
+
+  // jQuery(document).scrollTop(function () {
+  // 	var jQueryps = jQuery(".ev-meter-content p");
+  // 	var threshold = 500;
+  // 	var start = 0;
+
+  // 	var target;
+
+  // 	jQuery.each(jQueryps, function () {
+
+  // 		if (start > threshold) {
+
+  // 			targetp = jQuery(this); return false;
+  // 		} else {
+
+  // 			start = start + jQuery(this).text().length;
+  // 		}
+  // 	})
+
+  // 	if (targetp.length > 0) {
+  // 		jQuery('<div style="background-color:cornflowerblue"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero debitis, est commodi consequatur provident esse rem doloremque odit alias quis dolorum dolor, reiciendis dicta porro temporibus animi quasi repudiandae hic eveniet minus fugiat sit placeat. Assumenda nam alias est reiciendis maxime porro, illum labore perferendis consequuntur modi, sunt itaque! Tempore?</p></div>').insertAfter(targetp)
+  // 	}
+  // })
+
+  // function getHeight() {
+  // 	divElement = document.querySelector("#pcl-full-content");
+  // 	elemHeight = divElement.clientHeight;
+  // 	alert(document.querySelector(".output").textContent = "Height is:" + " " + elemHeight + "px");
+  // }
+
+  // let numb = document.getElementById("pcl-full-content").children.length;
+  // document.getElementById("demo").innerHTML = numb;
+</script>
