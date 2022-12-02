@@ -4294,22 +4294,71 @@
     <div id='cptup-ready'></div>
     <div id='user'></div>
     <div class="widget-dialog" id="offermapmain" style="width:90%"></div>
-    <script>
-        let flag = true;
-        let appendbox = "<div class='abc'><b>Div Injected</b></div>"
 
-        const paras = [1, 5, 7, 10];
-        for (let i = 0; i <= paras.length; i++) {
-            jQuery(document).on('scroll', function () {
-                let ptag = jQuery('#pcl-full-content p').eq(paras[i]);
-                if (jQuery(this).scrollTop() >= jQuery('#pcl-full-content p').eq([i]).position().top()) {
-                    if (paras.length >= [i]) {
-                        jQuery(ptag).append(appendbox).fadeIn(2500);
-                        flag = false;
-                    }
+    <script>
+
+        let pageHeight = document.body.scrollHeight;
+        let screenHeight = window.screen.height;
+        let totalAdv = pageHeight / screenHeight;
+        const height = [];
+        const pTag = [];
+        const pTagKeys = [];
+
+        for (let i = 1; i < totalAdv; i++) {
+            height.push(i * screenHeight);
+        }
+
+        let paras = document.getElementsByTagName("p");
+        //let elementHeight = paras[7].offsetTop;
+        console.log(height);
+        Object.keys(paras).forEach(key => {
+            //console.log(key);
+            //console.log(paras[key]);
+            let elementHeight = paras[key].offsetTop;
+            pTagKeys.push(elementHeight);
+            pTag[elementHeight] = paras[key];
+        });
+        console.log(pTag);
+
+        window.addEventListener('scroll', (event) => {
+            if ((height.length != 0)) {
+                let scrollHeightTop = this.scrollY;
+                console.log('Height from top is ' + scrollHeightTop);
+
+                let calculatedHeight = returnCloset(height, scrollHeightTop);
+
+                console.log('Closet Height is ' + calculatedHeight);
+
+                console.log('Closet Height for P Tag is ' + returnCloset(pTagKeys, calculatedHeight));
+              
+                //pTag[returnCloset(pTagKeys, calculatedHeight)].parentNode.insertAfter(newElem,pTag[returnCloset(pTagKeys, calculatedHeight)].nextSibling);
+
+                //pTag[returnCloset(pTagKeys, calculatedHeight)].insertAdjecentHTML('afterend','<div id="two">Two Three One</div>');
+                if(typeof pTag[returnCloset(pTagKeys, calculatedHeight)] != 'undefined'){
+                pTag[returnCloset(pTagKeys, calculatedHeight)].innerHTML = '<span style="color:red">Hi' + calculatedHeight + '</span>';
+                console.log('I am added height ' + calculatedHeight);
                 }
+                // delete height[calculatedHeight];
+
+                var index = height.indexOf(calculatedHeight);
+                if (index !== -1) {
+                    //height.splice(index, 1);
+                    pTag.splice(returnCloset(pTagKeys, calculatedHeight), 1);
+                }
+
+
+                console.log(height);
+                console.log(pTag);
+            }
+        });
+
+        function returnCloset(counts, goal) {
+            var closest = counts.reduce(function (prev, curr) {
+                return (Math.abs(curr - goal) < Math.abs(prev - goal) ? curr : prev);
             });
-        }   
+            return closest;
+        }
+
     </script>
 </body>
 
