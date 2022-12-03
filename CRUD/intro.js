@@ -1,5 +1,5 @@
+// conditional if else in javaScript 
 // is prime
-
 let num = 34945;
 let isPrime = true;
 
