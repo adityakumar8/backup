@@ -1,8 +1,10 @@
-var myStringArray = ["Hello", "World"];
-var arrayLength = myStringArray.length;
-for (var i = 0; i < arrayLength; i++) {
-  console.log(arrayLength);
-}
+
+
+// var myStringArray = ["Hello", "World"];
+// var arrayLength = myStringArray.length;
+// for (var i = 0; i < arrayLength; i++) {
+//   console.log(arrayLength);
+// }
 
 // function myScroll() {
 //   if (window.pageYOffset > 150) {
