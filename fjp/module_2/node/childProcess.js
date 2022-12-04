@@ -7,7 +7,8 @@ let cp = require('child_process');
 
 // open vscode with chidProcess
 // cp.execSync("code");
+
 let contentN = cp.execSync("node test.js"); // to get output from node file.
 let contentP = cp.execSync("python3 tst.py"); // to get output from python file.
-console.log("output form test.js is: "+ contentN);
-console.log("output from tst.py is: "+contentP);
+console.log(""+ contentN);
+console.log(""+ contentP);

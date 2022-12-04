@@ -1,22 +1,13 @@
-let fs = require('fs');
-let path = require('path');
+// "/home/user/Frontend Practice/fjp/module_2/node/path.js"
 
-let filepath =path.join(__dirname,"demo");
-console.log(filepath);
+let path = require("path");
+// console.log(path);
 
-// CREATING A DIRECTORY
+let extensionName = path.extname("/home/user/Frontend Practice/fjp/module_2/node/tst.py");
+console.log(extensionName);
 
-if (!fs.existsSync("yes_Directory")) {
-    fs.mkdirSync("Directory_is_created");
-}
+let baseName = path.basename("/home/user/Frontend Practice/fjp/module_2/index.html");
+console.log(baseName);
 
-// // READ A DIRECTORY:
-
-// let folderPath = __dirname;
-
-// let contentOfFolder = fs.readdirSync(folderPath);
-// console.log(contentOfFolder);
-
-// DELETE A DIRECTORY
-
-fs.rmdirSync("Directory_is_created");
+console.log(__dirname);
+console.log(__filename);
