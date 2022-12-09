@@ -775,7 +775,7 @@
         }
 
         .ie-adtext {
-            color: #555;
+            color: #000;
             font-family: "Roboto", sans-serif;
             font-size: 11px;
             padding: 0 0 7px;
@@ -3133,12 +3133,6 @@
                                 votes. As Congress denied ticket to Goriya, the former Congress MLA from adjoining
                                 Khambhalia Assembly seat, to challenge Manek one more time, he quit Congress last week
                                 and joined BJP and has since been campaigning for Manek. </p>
-                            <div class="ads-container">
-                                <div class="adboxtop adsizes">
-                                    <div class="ie-adtext">Advertisement</div>
-                                    <div data-id="gpt_ad_IE_ROS_MID_300X250" class="ad-slot dfp_ads "></div>
-                                </div>
-                            </div>
                             <div class="unitimg"><a href="https://images.indianexpress.com/2020/08/1x1.png"
                                     class="">https://images.indianexpress.com/2020/08/1x1.png</a></div>
                             <p>Manek&#8217;s unshakeable hold on the seat is at least partially attributed to support
@@ -3236,12 +3230,9 @@
                                         class="premium-widgets-events subscribebtn" data-type="Subscribe Now"
                                         data-device="M-site">Subscribe now at less than Rs 4/day</a></div>
                             </div>
-                            <div class="ads-container">
-                                <div class="adboxtop adsizes">
-                                    <div class="ie-adtext">Advertisement</div>
-                                    <div data-id="gpt_ad_IE_ROS_BTF_300X250" class="ad-slot dfp_ads "></div>
-                                </div>
-                            </div>
+
+
+
                             <span class="custom-caption"><img class="size-medium wp-image-8286377"
                                     src="https://indianexpress.com/wp-content/plugins/lazy-load/images/1x1.trans.gif"
                                     alt
@@ -3265,22 +3256,11 @@
                                 Religious tourism has seen a boom in recent years with Dwarka being one of the four Char
                                 Dhams. Ferry boats remain the lifeline between Bet Dwarka and the mainland, with work on
                                 a sea-link that began in 2017 still ongoing.</p>
-                            <div class="ads-container">
-                                <div class="adboxtop adsizes">
-                                    <div class="ie-adtext">Advertisement</div>
-                                    <div data-id="gpt_ad_IE_ROS_BTF1_300X250" class="ad-slot dfp_ads "></div>
-                                </div>
-                            </div>
+
                             <p>Following his 2017 loss, Goriya had moved the Gujarat High Court seeking Manek&#8217;s
                                 disqualification over an alleged error in the latter&#8217;s poll affidavit. While the
                                 High Court had granted his plea in April 2019, the Supreme Court ordered a stay, and the
                                 matter rested there.</p>
-                            <div class="ads-container">
-                                <div class="adboxtop adsizes">
-                                    <div class="ie-adtext">Advertisement</div>
-                                    <div id="gpt_ad_IE_ROS_ROTATE_1_300X250" class="ad-slot "></div>
-                                </div>
-                            </div>
                             <p>Asked about the secret of his success, Manek told <a href="https://indianexpress.com"
                                     class="">The Indian Express</a>, &#8220;I am not elected but selected, by voters of
                                 all communities. My mantra is to help people as much I can, but to never be a hurdle to
@@ -3621,26 +3601,11 @@
             type="hidden" name="_wp_http_referer"
             value="/article/political-pulse/bjp-pabubha-manek-dwarka-gujarat-assembly-polls-8286340/" /><input
             type="hidden" id="native_story_count" value=1></div>
-    <div class="no-ads-container">
-        <div data-id="gpt_ad_IE_ROS_OOP_INNOV1" class="ad-slot dfp_ads "></div>
-    </div>
-    <div class="no-ads-container">
-        <div data-id="gpt_ad_IE_ROS_ATF_1X1" class="ad-slot dfp_ads "></div>
-    </div>
     <div class="editor-pic">
         <h4></h4>
         <ul></ul>
     </div>
-    <div class="hide_utm_paytm_phonepe" id="append_cubebox_box" data-behavior="cubeIframe" style="">
-        <div class="gamingcubeiframe">
-            <div class="elec-cube">
-                <div class="iframe-close-icon" id="cube-box-close-btn">X</div>
-                <iframe class="desktop-site" width="140px" height="140px"
-                    src="https://data.indianexpress.com/iframes/cfo-awards/cfoawards.html?22112022" frameborder="0"
-                    scrolling="no" allowfullscreen=""></iframe>
-            </div>
-        </div>
-    </div>
+
     <div id="id_newsletter_subscription_popup" class="ev-meter-content" data-slug="political-pulse"> </div>
     <div class="js-btm-nav js-btm-hide hide_utm_paytm_phonepe">
         <div class="icon newsletter_icon"><a class="universal_footer_event" id="L1_Home"
@@ -4299,7 +4264,11 @@
 
         let pageHeight = document.body.scrollHeight;
         let screenHeight = window.screen.height;
-        let totalAdv = pageHeight / screenHeight;
+        let totalAdv = pageHeight / screenHeight * 2;
+        console.log(totalAdv);
+        let storePageHeightArray = [];
+        let removerepeatAdcodes = [];
+
         const height = [];
         const pTag = [];
         const pTagKeys = [];
@@ -4308,48 +4277,55 @@
             height.push(i * screenHeight);
         }
 
-        let paras = document.getElementsByTagName("p");
-        //let elementHeight = paras[7].offsetTop;
         console.log(height);
+        let paras = document.getElementsByTagName("p");
+
         Object.keys(paras).forEach(key => {
-            //console.log(key);
-            //console.log(paras[key]);
             let elementHeight = paras[key].offsetTop;
-            pTagKeys.push(elementHeight);
             pTag[elementHeight] = paras[key];
         });
         console.log(pTag);
-
+        pTag.forEach((x, y) => { pTagKeys.push(y); })
+        var oldScrollY = window.scrollY;
         window.addEventListener('scroll', (event) => {
-            if ((height.length != 0)) {
-                let scrollHeightTop = this.scrollY;
-                console.log('Height from top is ' + scrollHeightTop);
 
-                let calculatedHeight = returnCloset(height, scrollHeightTop);
-
-                console.log('Closet Height is ' + calculatedHeight);
-
-                console.log('Closet Height for P Tag is ' + returnCloset(pTagKeys, calculatedHeight));
-              
-                //pTag[returnCloset(pTagKeys, calculatedHeight)].parentNode.insertAfter(newElem,pTag[returnCloset(pTagKeys, calculatedHeight)].nextSibling);
-
-                //pTag[returnCloset(pTagKeys, calculatedHeight)].insertAdjecentHTML('afterend','<div id="two">Two Three One</div>');
-                if(typeof pTag[returnCloset(pTagKeys, calculatedHeight)] != 'undefined'){
-                pTag[returnCloset(pTagKeys, calculatedHeight)].innerHTML = '<span style="color:red">Hi' + calculatedHeight + '</span>';
-                console.log('I am added height ' + calculatedHeight);
-                }
-                // delete height[calculatedHeight];
-
-                var index = height.indexOf(calculatedHeight);
-                if (index !== -1) {
-                    //height.splice(index, 1);
-                    pTag.splice(returnCloset(pTagKeys, calculatedHeight), 1);
-                }
-
-
-                console.log(height);
-                console.log(pTag);
+            if (oldScrollY < window.scrollY) {
+                var scrollHeightTop = this.scrollY + screenHeight;
+            } else {
+                scrollHeightTop = this.scrollY - screenHeight;
             }
+
+            let calculatedHeight = returnCloset(height, scrollHeightTop);
+
+            let index = storePageHeightArray.indexOf(calculatedHeight);
+
+            let randomId = Math.floor(Math.random() * 1000000);
+            let numberGenerated = "ad-slot-id-" + randomId;
+
+            if (index == -1) {
+                const para = document.createElement("div");
+                para.setAttribute('class', 'ads-container');
+                let firstChild = para.appendChild(document.createElement("div"));
+                firstChild.setAttribute('class', 'adboxtop adsizes');
+                let secondChild = firstChild.appendChild(document.createElement("div"));
+                secondChild.setAttribute('class', 'ie-adtext')
+                secondChild.innerText = "inject Advertisement";
+                let secondChildD = firstChild.appendChild(document.createElement("div"));
+                secondChildD.setAttribute('id', numberGenerated);
+                secondChildD.setAttribute('class', 'ad-slot inject-ad-code');
+                secondChildD.setAttribute('title', 'IE_WAP_OTH_AS_MID_300X250');
+
+                let pTagHeight = returnParaTag(calculatedHeight, calculatedHeight + screenHeight, pTagKeys)
+                if (Number.isInteger(pTagHeight[0])) {
+                    pTag[pTagHeight[0]].parentNode.insertBefore(para, pTag[pTagHeight[0]]);
+                    if (false === removerepeatAdcodes.includes(numberGenerated)) {
+                        removerepeatAdcodes.push(numberGenerated);
+                        injectAdCodeindiv();
+                    }
+                }
+            }
+            // console.log(calculatedHeight);
+            storePageHeightArray.push(calculatedHeight);
         });
 
         function returnCloset(counts, goal) {
@@ -4357,6 +4333,43 @@
                 return (Math.abs(curr - goal) < Math.abs(prev - goal) ? curr : prev);
             });
             return closest;
+        }
+        function returnParaTag(lower, upper, array) {
+            let between = array.filter(function (item) {
+                return (item > lower && item < upper);
+            });
+            return between;
+        }
+
+        function injectAdCodeindiv() {
+            setTimeout(() => {
+                const adClasses = document.querySelectorAll('.inject-ad-code');
+                //console.log(adClasses);
+                const adClassLen = adClasses.length;
+                let count = 0;
+                let adDiv = '';
+                let adcodeslot = '';
+                let getadcodeslot = '';
+                const definedAdSlots = {};
+                // eslint-disable-next-line no-undef
+                googletag.cmd.push(() => {
+                    for (count = 0; count < adClassLen; count += 1) {
+                        adDiv = adClasses[count].getAttributeNode('id').value;
+                        getadcodeslot = adClasses[count].getAttributeNode('title').value;
+                        if ('' !== getadcodeslot) {
+                            adcodeslot = '/1050432/www.indianexpress.com/' + getadcodeslot;
+                        }
+                        // eslint-disable-next-line no-undef
+                        definedAdSlots[adDiv] = googletag.defineSlot(
+                            // eslint-disable-next-line no-undef
+                            adcodeslot, [300, 250], adDiv).addService(googletag.pubads());
+                        // eslint-disable-next-line no-undef
+                        googletag.display(adDiv);
+                        // eslint-disable-next-line no-undef
+                        googletag.pubads().refresh([definedAdSlots[adDiv]]);
+                    }
+                });
+            }, 2000);
         }
 
     </script>

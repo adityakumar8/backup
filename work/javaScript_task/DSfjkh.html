@@ -11,7 +11,7 @@
   } */
 </style>
 
-<body onscroll="myFunction()">
+<body> <!--onscroll="myFunction()" -->
   <h1>The Element Object</h1>
   <h2>The getElementsByTagName() Method</h2>
 
@@ -44,15 +44,28 @@
 
   <script>
 
-    let pval = jQuery('#myDIV p');
+    // let pval = jQuery('#myDIV p');
 
-    jQuery(window).on('scroll', function () {
-      let dd = pval.eq(2).offset().top;
-      if (jQuery('.demooo').length < 1) {
-        pval.eq(2).append('<div style="background-color:#7bdcb5" class="demooo">Appended div</div>');
-      }
-    });
+    // jQuery(window).on('scroll', function () {
+    //   let dd = pval.eq(2).offset().top;
+    //   if (jQuery('.demooo').length < 1) {
+    //     pval.eq(2).append('<div style="background-color:#7bdcb5" class="demooo">Appended div</div>');
+    //   }
+    // });
 
+/*
+let index = storePageHeightArray.indexOf(calculatedHeight);
+
+            let randomId = Math.floor(Math.random() * 1000000);
+            let numberGenerated = "ad-slot-id-" + randomId;
+
+            if (index == -1) {
+                const para = document.createElement("div");
+                para.setAttribute('id', numberGenerated);
+                para.setAttribute('class', 'inject-ad');
+                para.innerText = "This is a appended div.";
+
+*/ 
     // let pval = jQuery('#myDIV p');
     // let dd = pval.offset().top;
     // jQuery(window).on('scroll', function () {
@@ -90,6 +103,174 @@
 
 
 <script>
+  const appendAddService = [];
+
+  addServicesData = {
+   "div-gpt-ad-638ed6d0a1773-0":{
+      "name":"DESKTOP ATF_728X90",
+      "code":"www.loksatta.com\/LS_ROS_HOME_HP_ATF_728x90",
+      "sizes":[
+         [
+            970,
+            250
+         ],
+         [
+            970,
+            90
+         ],
+         [
+            728,
+            90
+         ]
+      ],
+      "targeting":[
+         
+      ],
+      "oop":false,
+      "atf":true
+   },
+   "div-gpt-ad-638ed6d0a9abd-0":{
+      "name":"DESKTOP ATF_300X250",
+      "code":"www.loksatta.com\/LS_ROS_HOME_HP_ATF_300x250",
+      "sizes":[
+         [
+            300,
+            250
+         ]
+      ],
+      "targeting":[
+         
+      ],
+      "oop":false,
+      "atf":true
+   },
+   "div-gpt-ad-638ed6d0aee69-0":{
+      "name":"DESKTOP MID_728X90",
+      "code":"www.loksatta.com\/LS_ROS_HOME_HP_MID_728x90",
+      "sizes":[
+         [
+            970,
+            250
+         ],
+         [
+            970,
+            90
+         ],
+         [
+            728,
+            90
+         ]
+      ],
+      "targeting":[
+         
+      ],
+      "oop":false,
+      "atf":false
+   },
+   "div-gpt-ad-638ed6d0b1dbd-0":{
+      "name":"DESKTOP MID_300X250",
+      "code":"www.loksatta.com\/LS_ROS_HOME_HP_MID_300x250",
+      "sizes":[
+         [
+            300,
+            247
+         ]
+      ],
+      "targeting":[
+         
+      ],
+      "oop":false,
+      "atf":false
+   },
+   "div-gpt-ad-638ed6d298cb4-0":{
+      "name":"DESKTOP BTF_300X250",
+      "code":"www.loksatta.com\/LS_ROS_HOME_HP_BTF_300X250",
+      "sizes":[
+         [
+            300,
+            250
+         ]
+      ],
+      "targeting":[
+         
+      ],
+      "oop":false,
+      "atf":false
+   },
+   "div-gpt-ad-638ed6d2a2418-0":{
+      "name":"DESKTOP BTF_728X90",
+      "code":"www.loksatta.com\/LS_ROS_HOME_HP_BTF_728X90",
+      "sizes":[
+         [
+            970,
+            250
+         ],
+         [
+            970,
+            90
+         ],
+         [
+            728,
+            90
+         ]
+      ],
+      "targeting":[
+         
+      ],
+      "oop":false,
+      "atf":false
+   },
+   "div-gpt-ad-638ed6d2a90f1-0":{
+      "name":"DESKTOP ATF_1x1",
+      "code":"www.loksatta.com\/LS_ROS_HOME_HP_ATF_1x1",
+      "sizes":[
+         [
+            1,
+            1
+         ]
+      ],
+      "targeting":[
+         
+      ],
+      "oop":false,
+      "atf":false
+   },
+   "div-gpt-ad-638ed6d2a9418-0":{
+      "name":"DESKTOP OOP_INNOV1",
+      "code":"www.loksatta.com\/LS_ROS_HOME_HP_OOP_INNOV1",
+      "sizes":[
+         [
+            1,
+            1
+         ]
+      ],
+      "targeting":[
+         
+      ],
+      "oop":true,
+      "atf":false
+   },
+   "div-gpt-ad-638ed6d2aa1d6-0":{
+      "name":"Auto Draft",
+      "code":"",
+      "sizes":[
+         
+      ],
+      "targeting":[
+         
+      ],
+      "oop":false,
+      "atf":false
+   }
+};
+
+for(let appendAddServiceW in addServicesData) {
+  appendAddService.push(addServicesData[appendAddServiceW]['name']);
+  // console.log(appendAddService);
+  for (appendAddServiceW in addServicesData) {
+    googletag.display('div-gpt-ad-638ed6d2a9418-0');  
+  }
+}
 
       // let ps = document.createElement('div');
       // ps.textContent = name;
