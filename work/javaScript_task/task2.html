@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .myDiv {
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="myDiv">
+        <p id="demo">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore quo praesentium harum modi doloribus
+            blanditiis non sed minus eaque similique. Assumenda modi sunt quasi natus aperiam molestiae labore
+            cupiditate repellendus, minus eveniet dolorem at voluptatem accusamus excepturi totam impedit quod ipsum
+            consequatur inventore esse ut beatae deleniti! Debitis, nam fuga eveniet quae minus in, eius architecto
+            natus dolorem, placeat a eaque repudiandae harum odio beatae nostrum. Ea, inventore totam earum tempora
+            deleniti quas consectetur, odit, est quasi repellendus voluptate. Optio ea consequuntur deleniti in facilis
+            nesciunt eius tempore ratione soluta perferendis necessitatibus atque, perspiciatis enim reprehenderit
+            placeat amet debitis! Ratione?
+        </p>
+    </div>
+    <script>
+        const element = document.getElementById("myDIV");
+        let text = "clientHeight: " + element.clientHeight + "px<br>";
+        text += "clientWidth: " + element.clientWidth + "px";
+        document.getElementById("demo").innerHTML = text;
+    </script>
+</body>
+
+</html>
